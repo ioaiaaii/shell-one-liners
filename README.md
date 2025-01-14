@@ -108,3 +108,10 @@ do
     ssh -i /path_to/.ssh/id_rsa -o StrictHostKeyChecking=no $USERNAME@$i " echo $MYCOMMAND | base64 -d | sudo bash "
 done
 ```
+## Processes
+Get a pid and kill it
+*e.g., get the PID of an SSH tunnel in the 8888 port and kill it*
+
+```shell
+ps aux | awk '/ssh/ && /8888:localhost:8888/ && !/awk/ { print $2 }' | xargs kill
+```
