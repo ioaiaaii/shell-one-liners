@@ -5,6 +5,13 @@
 
 ### Files
 
+
+List all expect a pattern:
+*e.g. list all files in dir but not md files*
+```shell
+find . -type f ! -name "*.md
+```
+
 Find files with specific type, containing a pattern
 *e.g. get all `yml` files, containing networks `10.168` and `10.99`*
 
